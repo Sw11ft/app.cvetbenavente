@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-</LinearLayout>
+    android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_height="190.0dp"
+        android:id="@+id/imageView1"
+        android:layout_marginBottom="0.0dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:hint="Utilizador"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="30dp"
+        android:typeface="sans"
+        android:layout_below="@id/imageView1"
+        android:layout_marginLeft="30dp" />
+    <Button
+        android:text="Entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LoginButton"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="0.0dp"
+        android:background="#6164C1"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:capitalize="none"
+        android:textAllCaps="true"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageButton
+            android:src="@drawable/bst_logo"
+            android:layout_width="138.0dp"
+            android:layout_height="42.0dp"
+            android:id="@+id/imageButton1"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="4.5dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginTop="5.0dp"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="11.5dp" />
+    </LinearLayout>
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:hint="Password"
+        android:gravity="center_horizontal"
+        android:typeface="sans"
+        android:layout_marginTop="10.0dp"
+        android:layout_below="@id/username"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp" />
+</RelativeLayout>
