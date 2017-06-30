@@ -56,5 +56,30 @@ namespace app.cvetbenavente
 
             return null;
         }
+
+        public static string GetEvents(string accessKey, DateTime from, DateTime to)
+        {
+            string strUri = string.Format("https://api.cvb.pedro-gaspar.com/api/eventos?from={0}&to={1}", 
+                                           Uri.EscapeDataString(from.ToString("MM/dd/yyyy")), 
+                                           Uri.EscapeDataString(to.ToString("MM/dd/yyyy")));
+
+            string result;
+            using (WebClient wc = new WebClient())
+            {
+                wc.Headers[HttpRequestHeader.Authorization] = "Bearer " + accessKey;
+
+                try
+                {
+                    result = wc.DownloadString(strUri);
+                    return result;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+
+                    return null;
+                }
+            }
+        }
     }
 }

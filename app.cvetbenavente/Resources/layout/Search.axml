@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Procurar Eventos"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginBottom="9.0dp" />
+    <TextView
+        android:text="Data Inicial"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="317.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8.0dp" />
+    <Button
+        android:text="Escolher Dia"
+        android:layout_width="324.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataInicialButton"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:text="Data Final"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="317.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="14.5dp"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:text="Escolher Dia"
+        android:layout_width="324.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataFinalButton"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:text="Pesquisar"
+        android:id="@+id/SearchButton"
+        android:background="#6164C1"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:capitalize="none"
+        android:textAllCaps="true"
+        android:layout_width="317.0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49.0dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace app.cvetbenavente
 {
@@ -30,7 +31,6 @@ namespace app.cvetbenavente
                 {
                     login.Enabled = false;
                     string ak = Login.GetAccessKey(username.Text, password.Text);
-                    login.Enabled = true;
 
                     if (string.IsNullOrWhiteSpace(ak))
                     {
@@ -38,7 +38,18 @@ namespace app.cvetbenavente
                         builder.SetMessage("Login sem sucesso. Confirme as credenciais e certifique-se de que tem acesso à internet.")
                                .SetNeutralButton("OK", (c, ev) => { })
                                .Show();
-                        
+
+                        login.Enabled = true;
+                    }
+                    else
+                    {
+                        var _searchActivity = new Intent(this, typeof(SearchActivity));
+                        _searchActivity.PutExtra("username", username.Text);
+                        _searchActivity.PutExtra("password", password.Text);
+
+                        login.Enabled = true;
+
+                        StartActivity(_searchActivity);
                     }
                 }
             };
